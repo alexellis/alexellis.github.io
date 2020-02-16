@@ -17,12 +17,16 @@ export class UserList extends React.Component {
     }
 
     render() {
-//href={'/posts/' + post.id}
         return (
-            <div>
-            {this.state.results.map((item, index) => (
-              <p><a style={{color: 'white'}} href={'https://github.com/' + item.UserLogin}>{item.UserLogin}</a> - { item.IssuesCreated } issues created</p>
-            ))}
+            <div id="links">
+                <ul id="links-list" style={{'list-style-type': 'none'}}>
+                    {this.state.results.map((item, index) => (
+                    
+
+                    <li id={item.UserLogin+'-item'} key={index.toString()}>
+                        { item.IssuesCreated } - <a id={item.UserLogin+'-link'} class={item.IssuesCreated > 10 ? "hot" : "regular"} style={{color: 'white'}} rel="noopener noreferrer" target="_blank" href={'https://github.com/' + item.UserLogin}>{item.UserLogin}</a></li>
+                    ))}
+            </ul>
           </div>
         )
     }

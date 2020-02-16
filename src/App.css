@@ -13,6 +13,26 @@
   }
 }
 
+.App-header p{
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  line-height: 1.0;
+}
+
+.hot {
+  font-weight: bolder;
+}
+
+.cold{
+  font-weight: normal;
+}
+
+li {
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
