@@ -27,7 +27,11 @@ class LeaderboardApi {
 
   parseResponse({ data }) {
     if(data) {
-      return data.sort((a,b)=>{
+      let filtered = data.filter((value, index, sorted) => {
+        return value.IssuesCreated
+      })
+
+      let sorted = filtered.sort((a,b)=>{
         if(a.IssuesCreated> b.IssuesCreated) {
           return -1
         } else if(b.IssuesCreated> a.IssuesCreated) {
@@ -35,6 +39,8 @@ class LeaderboardApi {
         }
         return 0
       })
+
+      return sorted
     }
     return [];
   }

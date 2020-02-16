@@ -1,7 +1,6 @@
 import React from 'react';
 import LeaderboardApi from "./api.js"
 
-
 export class UserList extends React.Component {
     constructor(props) {
         super(props);
@@ -18,11 +17,11 @@ export class UserList extends React.Component {
     }
 
     render() {
-
+//href={'/posts/' + post.id}
         return (
             <div>
             {this.state.results.map((item, index) => (
-              <p>{item.UserLogin} - { item.IssuesCreated } issues created</p>
+              <p><a style={{color: 'white'}} href={'https://github.com/' + item.UserLogin}>{item.UserLogin}</a> - { item.IssuesCreated } issues created</p>
             ))}
           </div>
         )
