@@ -1,12 +1,13 @@
 import React from 'react';
-import List from './List.js'
+import UserList from './List.js'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <List></List>
+        <h2>Who's created the most issues?</h2>
+        <UserList></UserList>
       </header>
     </div>
   );

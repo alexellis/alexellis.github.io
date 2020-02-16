@@ -26,8 +26,17 @@ class LeaderboardApi {
   }
 
   parseResponse({ data }) {
-    console.log(data);
-    return data;
+    if(data) {
+      return data.sort((a,b)=>{
+        if(a.IssuesCreated> b.IssuesCreated) {
+          return -1
+        } else if(b.IssuesCreated> a.IssuesCreated) {
+          return 1
+        }
+        return 0
+      })
+    }
+    return [];
   }
 }
 

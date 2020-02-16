@@ -2,7 +2,7 @@ import React from 'react';
 import LeaderboardApi from "./api.js"
 
 
-export class List extends React.Component {
+export class UserList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,11 +21,11 @@ export class List extends React.Component {
 
         return (
             <div>
-            {this.state.results.map((item,index) => (
+            {this.state.results.map((item, index) => (
               <p>{item.UserLogin} - { item.IssuesCreated } issues created</p>
             ))}
           </div>
         )
     }
 }
-export default List;
+export default UserList;
